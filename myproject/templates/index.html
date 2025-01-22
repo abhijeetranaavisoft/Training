@@ -1,0 +1,30 @@
+<!--
+  <h1>
+      welcome {{name}}<br>You are {{age}}<br>you are {{nationality}}
+  </h1>
+  
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <h1>Hey,welcome to my project</h1>-->
+  <!--<h1>input your text</h1>
+  <form method="POST" action="counter">
+      {%csrf_token%}
+      <textarea name="text" rows="25" cols="100"></textarea><br> 
+      <input type="submit"/>
+  
+      </textarea>
+
+      here we can iterate on features by passing over a template of html page
+      {% for feature in features %}
+      {% if feature.is_true == true  %}
+      
+
+      {% endif %}
+
+      html component
+  </form>-->
+  <h1> welcome to the home page</h1>
+  {% if user.is_authenticated%}
+  <li><a class="getstarted scrollto" href="logout">Logout</a></li>
+  {%else%}
+  <li><a class="getstarted scrollto" href="login">Login or signup</a></li>
+  {%endif%}
