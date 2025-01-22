@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Ready for Download</title>
+</head>
+<body>
+    <h1>Content is ready for download!</h1>
+    
+        <div>
+            <p>{{ content.url }}</p>
+            <a href="{% url 'download' pk=content.pk %}">Click here to download the extracted content</a>
+        </div>
+    
+</body>
+</html>

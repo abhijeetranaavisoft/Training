@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Extracted Content</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Download Extracted Content</h1>
+    <p>Click the button below to download the extracted content from the provided URL:</p>
+
+    <div>
+        <p><strong>URL:</strong> {{ content.url }}</p>
+        <form method="GET" action="{% url 'download' content.id %}">
+            <button type="submit">Download .txt File</button>
+        </form>
+    </div>
+
+    <p><a href="{% url 'home' %}">Go Back</a></p>
+</body>
+</html>
